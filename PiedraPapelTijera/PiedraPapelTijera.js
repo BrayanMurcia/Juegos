@@ -23,7 +23,7 @@ let perdidas = 0
 let empates = 0
 
 alert("¡Bienvenido al juego de Piedra, Papel o Tijera!\n" +
-      "Gana el primero en alcanzar 3 triunfos o 3 derrotas.")
+    "Gana el primero en alcanzar 3 triunfos o 3 derrotas.")
 
 while (triunfos < 3 && perdidas < 3) {
 
@@ -53,9 +53,9 @@ while (triunfos < 3 && perdidas < 3) {
 }
 
 alert("Resultados finales:\n" +
-      "Triunfos: " + triunfos + "\n" +
-      "Derrotas: " + perdidas + "\n" +
-      "Empates: " + empates)
+    "Triunfos: " + triunfos + "\n" +
+    "Derrotas: " + perdidas + "\n" +
+    "Empates: " + empates)
 
 if (triunfos == 3) {
     alert("¡Felicidades! Has ganado el juego.")
