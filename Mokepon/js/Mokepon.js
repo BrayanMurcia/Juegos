@@ -1,6 +1,16 @@
+let ataqueJugador
+let ataqueEnemigo
+
 function iniciarJuego() {
-    let botonSeleccionarMascota = document.getElementById("boton-seleccionar-mascota");
-    botonSeleccionarMascota.addEventListener("click", seleccionarMascotaJugador);
+    let botonSeleccionarMascota = document.getElementById("boton-seleccionar-mascota")
+    botonSeleccionarMascota.addEventListener("click", seleccionarMascotaJugador)
+
+    let botonFuego = document.getElementById("boton-fuego")
+    botonFuego.addEventListener("click", ataqueFuego)
+    let botonAgua = document.getElementById("boton-agua")
+    botonAgua.addEventListener("click", ataqueAgua)
+    let botonTierra = document.getElementById("boton-tierra")
+    botonTierra.addEventListener("click", ataqueTierra)
 }
 
 function seleccionarMascotaJugador() {
@@ -48,6 +58,34 @@ function seleccionarMascotaEnemigo() {
         mascotaEnemigo.innerHTML = "Tucapalma"
     } else if (ataqueAleatorio == 6) {
         mascotaEnemigo.innerHTML = "Pydos"
+    }
+}
+
+function ataqueFuego() {
+    ataqueJugador = "Fuego 🔥"
+    alert(ataqueJugador)
+}
+function ataqueAgua() {
+    ataqueJugador = "Agua 💧"
+    alert(ataqueJugador)
+}
+function ataqueTierra() {
+    ataqueJugador = "Tierra 🌱"
+    alert(ataqueJugador)
+}
+
+function seleccionarAtaqueEnemigo() {
+    let ataqueAleatorio = aleatorio(1, 3)
+
+    if (ataqueAleatorio == 1) {
+        ataqueEnemigo = "Fuego 🔥"
+        alert("Enemigo " + ataqueEnemigo)
+    } else if (ataqueAleatorio == 2) {
+        ataqueEnemigo = "Agua 💧"
+        alert("Enemigo " + ataqueEnemigo)
+    } else if (ataqueAleatorio == 3) {
+        ataqueEnemigo = "Tierra 🌱"
+        alert("Enemigo " + ataqueEnemigo)
     }
 }
 
